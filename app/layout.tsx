@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
-// const Satoshi = SatoshiFont({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Novice",
@@ -17,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body >{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body >{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
