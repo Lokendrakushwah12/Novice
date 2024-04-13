@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <header className='w-full border-b'>
             <div className="wrapper flex items-center h-[60px] justify-between w-full">
-                <Link href="/" className='w-36'>
+                <Link href="/" className=''>
                     <Image src="/assets/images/logo.svg" width={24} height={24}
                         alt="Novice logo"
                     />
@@ -18,7 +18,7 @@ const Header = () => {
                 <nav className='md:flex-between justify-center md:w-[300px] items-center md:flex hidden w-full  m-w-xs'>
                     <NavItems />
                 </nav>
-                <div className="flex w-24 justify-end gap-3">
+                <div className="flex justify-center items-center gap-3">
                     <SignedIn>
                         <UserButton afterSignOutUrl='/' />
                         <MobileNav />
@@ -29,7 +29,7 @@ const Header = () => {
                             Login
                             </Link>
                         </Button> */}
-                        <div className='font-[400] hover:bg-[#eff0f0] flex items-start justify-center w-[100px] cursor-pointer rounded-lg transition-all hover:p-1 p-0'>
+                        <div className='font-[400] hover:bg-[#eff0f0] flex items-start justify-center w-[80px] cursor-pointer rounded-lg transition-all hover:p-1 p-0'>
                             <Link className='flex gap-1' href="/sign-in">
                                 Login
                                 <Image

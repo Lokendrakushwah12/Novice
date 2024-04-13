@@ -309,3 +309,7 @@ body {
 .react-datepicker__time-list-item--selected {
   background-color: #624cf5 !important;
 }
+
+.text-glow {
+  box-shadow: 0 0 5px #35353510; /* Adjust the color and blur radius as needed */
+}
