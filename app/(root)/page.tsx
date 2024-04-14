@@ -4,11 +4,11 @@ import Logo from "@/components/ui/Logo";
 import { SignedOut } from "@clerk/nextjs";
 import Link from 'next/link'
 import Image from "next/image";
-import { useRef, useState } from "react";
+import React, { useRef, useState } from 'react';
 
 
 export default function Home() {
-  const cardRef = useRef<HTMLElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
