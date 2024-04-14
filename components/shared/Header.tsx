@@ -10,10 +10,13 @@ const Header = () => {
     return (
         <header className='w-full border-b'>
             <div className="wrapper flex items-center h-[60px] justify-between w-full">
-                <Link href="/" className=''>
+                <Link href="/" className='flex-center gap-2'>
                     <Image src="/assets/images/logo.svg" width={24} height={24}
                         alt="Novice logo"
                     />
+                    <div className='font-[500] text-[#414141]'>
+                        Novice
+                    </div>
                 </Link>
                 <nav className='md:flex-between justify-center md:w-[300px] items-center md:flex hidden w-full  m-w-xs'>
                     <NavItems />
@@ -30,7 +33,7 @@ const Header = () => {
                             </Link>
                         </Button> */}
                         <div className='font-[400] hover:bg-[#eff0f0] flex items-start justify-center w-[80px] cursor-pointer rounded-lg transition-all hover:p-1 p-0'>
-                            <Link className='flex gap-1' href="/sign-in">
+                            <Link className='flex gap-1 font-[500] text-[#414141]' href="/sign-in">
                                 Login
                                 <Image
                                     src='./assets/icons/login.svg'
