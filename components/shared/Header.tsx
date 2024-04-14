@@ -9,7 +9,7 @@ import MobileNav from './MobileNav'
 const Header = () => {
     return (
         <header className='w-full border-b'>
-            <div className="wrapper flex items-center h-[60px] justify-between w-full">
+            <div className="wrapper flex items-center h-[60px] md:px-4 justify-between w-full">
                 <Link href="/" className='flex-center gap-2'>
                     <Image src="/assets/images/logo.svg" width={24} height={24}
                         alt="Novice logo"
