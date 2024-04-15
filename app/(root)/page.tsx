@@ -82,17 +82,17 @@ export default function Home() {
       </section>
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-center gap-5 bg-[#282c32] text-white p-4 m-4 lg:m-12  xl:m-28 rounded-xl">
         <h1 className="w-[380px] text-3xl text-start">Why Us?</h1>
-        <div className="text-[rgba(255,255,255,0.75)] w-full sm:w-[780px]">
-          <h3 className="ml-3">At Novice, we're more than just a platform for learning to code.</h3>
-          <ul>
-            <li>
-              <span className="list-number">1.</span> We're your trusted companion on your coding journey, offering expert guidance  supportive community, and a wealth of resources tailored specifically for novices.
+        <div className="text-[rgba(255,255,255,0.75)] w-full sm:w-[780px] flex flex-col gap-2">
+          <ul className="custom-list">
+            <li>At Novice, we're more than just a platform for learning to code.</li>
+            <li className="-mt-2">
+              We're your trusted companion on your coding journey, offering expert guidance  supportive community, and a wealth of resources tailored specifically for novices.
             </li>
-            <li>
-              <span className="list-number">2.</span> Say goodbye to endless searches and confusion. With our streamlined approach, you'll save valuable time and focus on what matters most: mastering coding with confidence.
+            <li className="-mt-2">
+              Say goodbye to endless searches and confusion. With our streamlined approach, you'll save valuable time and focus on what matters most: mastering coding with confidence.
             </li>
           </ul>
-          <h3 className="ml-3">Join us and embark on your path to coding mastery with confidence.</h3>
+          <h3 className="-mt-4">Join us and embark on your path to coding mastery with confidence.</h3>
         </div>
       </div>
       <section className="bg-[#fff] py-5 md:py-10">
@@ -104,19 +104,19 @@ export default function Home() {
               imageUrl='/assets/images/FrontendDevelopement.png'
               title='Frontend Development'
               description='Learn the art of creating beautiful and responsive user interfaces with our comprehensive frontend development courses.'
-              buttonUrl='/'
+              size={268}
             />
             <Card
               imageUrl='./assets/images/codeforces.svg'
               title='Competitive Programming'
               description='Hone your problem-solving skills and prepare for coding competitions with our specialized competitive programming track.'
-              buttonUrl='/'
+              size={72}
             />
             <Card
-              imageUrl='./assets/icons/star.svg'
+              imageUrl='/assets/images/DSA.png'
               title='Data Structures and Algorithms'
               description='Master the fundamentals of data structures and algorithms and enhance your problem-solving abilities with our DSA courses.'
-              buttonUrl='/'
+              size={200}
             />
 
           </div>

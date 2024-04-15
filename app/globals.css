@@ -319,3 +319,21 @@ body {
   box-shadow: 0 0 5px #35353510;
   /* Adjust the color and blur radius as needed */
 }
+
+.custom-list {
+  list-style: none; /* Remove default list styles */
+  counter-reset: list-counter; /* Initialize the counter */
+  padding-left: 1.5em; /* Adjust padding to accommodate custom markers */
+}
+
+.custom-list li {
+  position: relative; /* Make the <li> element a positioned container for pseudo-elements */
+  margin-bottom: 1em; /* Adjust margin as needed */
+}
+
+.custom-list li::before {
+  content: counter(list-counter) ". "; /* Use the counter value as content */
+  counter-increment: list-counter; /* Increment the counter for each list item */
+  position: absolute; /* Position the numbering relative to the <li> element */
+  left: -1.5em; /* Adjust left position to align numbering with list item */
+}

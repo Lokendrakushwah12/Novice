@@ -7,21 +7,23 @@ interface CardProps {
     imageUrl: string;
     title: string;
     description: string;
-    buttonUrl: string;
+    size: number;
 }
 
-const Card: React.FC<CardProps> = ({ imageUrl, title, description }) => {
+const Card: React.FC<CardProps> = ({ imageUrl, title, description, size }) => {
 
     return (
         <div className="bg-[#fff] transition-all flex flex-col gap-2">
             {/* Image */}
-            <Image
-                className="w-full h-[200px] bg-[#f0f0f0] rounded-xl"
-                src={imageUrl}
-                width={500}
-                height={500}
-                alt='signup'
-            />
+            <div className="w-full h-[200px] flex items-center justify-center bg-primary-50 rounded-xl">
+                <Image
+                    src={imageUrl}
+                    width={`${size}`}
+                    height={`${size}`}
+                    alt='signup'
+                />
+            </div>
+
             <h1 className="text-[#282C32] font-[500] text-base">{title}</h1>
             <p className="text-[#282C32] font-[400] text-sm leading-[1.45] tracking-[-0.02px]  ">{description}</p>
             <Link href="/">

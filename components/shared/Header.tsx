@@ -28,7 +28,7 @@ const Header = () => {
 
     return (
         <>
-            <div className="flex justify-center items-center">
+            <div className="z-50 flex justify-center items-center">
                 <nav className={` backdrop-blur-md bg-[#ffffffcc] fixed top-0 flex justify-center items-center shadow border p-1 rounded-xl h-[40px] m-w-xs ${showSmallNav ? 'translate-y-4' : '-translate-y-10'} transition-all ease-out`}>
                     <NavItems />
                 </nav>
