@@ -25,7 +25,7 @@ export default function Home() {
       <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
         <div className="wrapper flex flex-col gap-5 md:grid-rows-2 2xl:gap-0">
           <div className="flex flex-col items-center justify-center gap-8">
-            <p className="text-lg border rounded-full bg-white px-2 text-glow">The best place to learn and grow</p>
+            <p className="text-base border rounded-full bg-white px-2 text-glow">The best place to learn and grow</p>
             <div
               className="flex flex-col place-items-center stroke-[1] hover:stroke-[1.5]"
               ref={cardRef}
