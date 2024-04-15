@@ -52,7 +52,7 @@ const Header = () => {
                     <div className="flex justify-center items-center gap-3">
                         <SignedIn>
                             <UserButton afterSignOutUrl='/' />
-                            <MobileNav />
+                            {/* <MobileNav /> */}
                         </SignedIn>
                         <SignedOut>
                             <div className='flex-center font-[500] text-center hover:bg-[#00000010] cursor-pointer rounded-lg transition-all hover:py-1 py-0 px-1'>
