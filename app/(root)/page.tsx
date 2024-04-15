@@ -5,6 +5,7 @@ import { SignedOut } from "@clerk/nextjs";
 import Link from 'next/link'
 import Image from "next/image";
 import React, { useRef, useState } from 'react';
+import Card from "@/components/ui/Card";
 
 
 export default function Home() {
@@ -81,88 +82,43 @@ export default function Home() {
       </section>
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-center gap-5 bg-[#282c32] text-white p-4 m-4 lg:m-12  xl:m-28 rounded-xl">
         <h1 className="w-[380px] text-3xl text-start">Why Us?</h1>
-        <p className="text-[rgba(255,255,255,0.75)] w-full sm:w-[780px]">At Novice, we're more than just a platform for learning to code. We're your trusted companion
-          on your coding journey, offering expert guidance, a supportive community, and a wealth of resources
-          tailored specifically for novices. Join us and embark on your path to coding mastery with confidence.</p>
+        <div className="text-[rgba(255,255,255,0.75)] w-full sm:w-[780px]">
+          <h3 className="ml-3">At Novice, we're more than just a platform for learning to code.</h3>
+          <ul>
+            <li>
+              <span className="list-number">1.</span> We're your trusted companion on your coding journey, offering expert guidance  supportive community, and a wealth of resources tailored specifically for novices.
+            </li>
+            <li>
+              <span className="list-number">2.</span> Say goodbye to endless searches and confusion. With our streamlined approach, you'll save valuable time and focus on what matters most: mastering coding with confidence.
+            </li>
+          </ul>
+          <h3 className="ml-3">Join us and embark on your path to coding mastery with confidence.</h3>
+        </div>
       </div>
-      <section className="bg-[#f0f0f0] py-5 md:py-10">
+      <section className="bg-[#fff] py-5 md:py-10">
         <div className="wrapper flex flex-col gap-2">
-
           <div className="w-full border-b"></div>
           <p className="font-[500] text-sm">Students' Top Picks</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-[#fcfcfc] p-2 rounded-2xl hover:bg-[#fff] transition-all flex flex-col gap-2">
-              {/* Image */}
-              <Image
-                className="w-full h-[200px] bg-[#f0f0f0] rounded-xl"
-                src='./assets/icons/star.svg'
-                width={20}
-                height={20}
-                alt='signup'
-              />
-              <h1 className="text-[#282C32] font-[500] text-base">Frontend Developement</h1>
-              <p className="text-[#282C32] font-[400] text-sm leading-[1.45] tracking-[-0.02px]  ">Titan Crypto, providing exposure to professionally managed crypto ETFs, is now eligible for Roth and Traditional IRAs.</p>
-              <Link href="/">
-                <Button className='font-[400] gap-2 w-[80px] border hover:border-[#d9d9d9] rounded-lg p-0 hover:bg-white bg-[#fcfcfc] text-[#282C32] text-md flex items-center justify-center cursor-pointer transition-all'>
-                  View
-                  <Image
-                    className=" stroke-none"
-                    src='./assets/icons/arrow-square-rightDark.svg'
-                    width={20}
-                    height={20}
-                    alt='signup'
-                  />
-                </Button>
-              </Link>
-            </div>
-            <div className="bg-[#fcfcfc] p-2 rounded-2xl hover:bg-[#fff] transition-all flex flex-col gap-2">
-              {/* Image */}
-              <Image
-                className="w-full h-[200px] bg-[#f0f0f0] rounded-xl"
-                src='./assets/icons/star.svg'
-                width={20}
-                height={20}
-                alt='signup'
-              />
-              <h1 className="text-[#282C32] font-[500] text-base">CP</h1>
-              <p className="text-[#282C32] font-[400] text-sm leading-[1.45] tracking-[-0.02px]  ">Titan Crypto, providing exposure to professionally managed crypto ETFs, is now eligible for Roth and Traditional IRAs.</p>
-              <Link href="/">
-                <Button className='font-[400] gap-2 w-[80px] border hover:border-[#d9d9d9] rounded-lg p-0 hover:bg-white bg-[#fcfcfc] text-[#282C32] text-md flex items-center justify-center cursor-pointer transition-all'>
-                  View
-                  <Image
-                    className=" stroke-none"
-                    src='./assets/icons/arrow-square-rightDark.svg'
-                    width={20}
-                    height={20}
-                    alt='signup'
-                  />
-                </Button>
-              </Link>
-            </div>
-            <div className="bg-[#fcfcfc] p-2 rounded-2xl hover:bg-[#fff] transition-all flex flex-col gap-2">
-              {/* Image */}
-              <Image
-                className="w-full h-[200px] bg-[#f0f0f0] rounded-xl"
-                src='./assets/icons/star.svg'
-                width={20}
-                height={20}
-                alt='signup'
-              />
-              <h1 className="text-[#282C32] font-[500] text-base">DSA</h1>
-              <p className="text-[#282C32] font-[400] text-sm leading-[1.45] tracking-[-0.02px]  ">Titan Crypto, providing exposure to professionally managed crypto ETFs, is now eligible for Roth and Traditional IRAs.</p>
-              <Link href="/">
-                <Button className='font-[400] gap-2 w-[80px] border hover:border-[#d9d9d9] rounded-lg p-0 hover:bg-white bg-[#fcfcfc] text-[#282C32] text-md flex items-center justify-center cursor-pointer transition-all'>
-                  View
-                  <Image
-                    className=" stroke-none"
-                    src='./assets/icons/arrow-square-rightDark.svg'
-                    width={20}
-                    height={20}
-                    alt='signup'
-                  />
-                </Button>
-              </Link>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <Card
+              imageUrl='/assets/images/FrontendDevelopement.png'
+              title='Frontend Development'
+              description='Learn the art of creating beautiful and responsive user interfaces with our comprehensive frontend development courses.'
+              buttonUrl='/'
+            />
+            <Card
+              imageUrl='./assets/images/codeforces.svg'
+              title='Competitive Programming'
+              description='Hone your problem-solving skills and prepare for coding competitions with our specialized competitive programming track.'
+              buttonUrl='/'
+            />
+            <Card
+              imageUrl='./assets/icons/star.svg'
+              title='Data Structures and Algorithms'
+              description='Master the fundamentals of data structures and algorithms and enhance your problem-solving abilities with our DSA courses.'
+              buttonUrl='/'
+            />
+
           </div>
         </div>
       </section>

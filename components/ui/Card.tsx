@@ -1,0 +1,43 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
+import { Button } from './button'
+
+interface CardProps {
+    imageUrl: string;
+    title: string;
+    description: string;
+    buttonUrl: string;
+}
+
+const Card: React.FC<CardProps> = ({ imageUrl, title, description }) => {
+
+    return (
+        <div className="bg-[#fff] transition-all flex flex-col gap-2">
+            {/* Image */}
+            <Image
+                className="w-full h-[200px] bg-[#f0f0f0] rounded-xl"
+                src={imageUrl}
+                width={500}
+                height={500}
+                alt='signup'
+            />
+            <h1 className="text-[#282C32] font-[500] text-base">{title}</h1>
+            <p className="text-[#282C32] font-[400] text-sm leading-[1.45] tracking-[-0.02px]  ">{description}</p>
+            <Link href="/">
+                <Button className='font-[400] gap-2 w-[80px] border hover:border-[#d9d9d9] rounded-lg p-0 hover:bg-white bg-[#fff] text-[#282C32] text-md flex items-center justify-center cursor-pointer transition-all'>
+                    View
+                    <Image
+                        className=" stroke-none"
+                        src='./assets/icons/arrow-square-rightDark.svg'
+                        width={20}
+                        height={20}
+                        alt='signup'
+                    />
+                </Button>
+            </Link>
+        </div>
+    )
+}
+
+export default Card
