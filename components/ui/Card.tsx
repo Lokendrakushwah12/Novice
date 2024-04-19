@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, title, description, size }) => {
                     src={imageUrl}
                     width={`${size}`}
                     height={`${size}`}
-                    alt='signup'
+                    alt={title}
                 />
             </div>
 
@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, title, description, size }) => {
                         src='./assets/icons/arrow-square-rightDark.svg'
                         width={20}
                         height={20}
-                        alt='signup'
+                        alt='View'
                     />
                 </Button>
             </Link>
