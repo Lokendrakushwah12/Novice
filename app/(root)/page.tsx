@@ -249,6 +249,8 @@ export default function Home() {
           </div>
         </div>
       </section >
+      <iframe src="https://roadmap.sh/r/embed?id=66239b47abd69d4fb4d0493a" width="100%" height="500px" frameBorder="0"></iframe>
+      <iframe width="800" height="450" src="https://whimsical.com/embed/SKjUpXxoba798Kbi2unAxw"></iframe>
       {/* <Button variant="default" className="bg-[#121212] hover:bg-[#282c32]">click me Satoshi </Button> */}
     </>
   );
