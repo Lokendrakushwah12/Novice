@@ -1,26 +1,13 @@
+"use client";
 import React from 'react'
 import { Button } from "@/components/ui/button"
-import {
-    Form,
-    FormControl,
-    FormDescription,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage,
-} from "@/components/ui/form"
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
+import { formSchema } from '@/lib/validator';
 import * as z from 'zod';
-
-const formSchema = z.object({
-    title: z.string().min(2,
-        { message: 'Title should be atleast 2 characters long' }
-    ).max(100,
-        { message: 'Title should not exceed 100 characters' }
-    ),
-});
+import { resourceDefaultValues } from '@/constants';
 
 type ResourceFormProps = {
     userId: string;
@@ -28,39 +15,39 @@ type ResourceFormProps = {
 }
 
 const ResourceForm = ({ userId, type }: ResourceFormProps) => {
-    // 1. Define your form.
+    const initialValues = resourceDefaultValues;
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
-        defaultValues: {
-            title: "",
-        },
+        defaultValues: initialValues
     })
 
-    // 2. Define a submit handler.
     function onSubmit(values: z.infer<typeof formSchema>) {
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
         console.log(values)
     }
+
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                <FormField
-                    control={form.control}
-                    name="username"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>Username</FormLabel>
-                            <FormControl>
-                                <Input placeholder="shadcn" {...field} />
-                            </FormControl>
-                            <FormDescription>
-                                This is your public display name.
-                            </FormDescription>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
+            <form onSubmit={form.handleSubmit(onSubmit)}
+                className="flex flex-col gap-5">
+                <div className="flex flex-col gap-5 md:flex-row">
+                    <FormField
+                        control={form.control}
+                        name="title"
+                        render={({ field }) => (
+                            <FormItem className='w-full'>
+                                <FormControl>
+                                    <Input placeholder="Resource title" {...field}
+                                        className='input-field'
+                                    />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                </div>
                 <Button type="submit">Submit</Button>
             </form>
         </Form>

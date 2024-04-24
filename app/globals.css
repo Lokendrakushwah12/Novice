@@ -381,3 +381,15 @@ body {
     width: 330px;
   }
 }
+.logo path {
+  animation: animateGradient 5s linear infinite;
+}
+
+@keyframes animateGradient {
+  0% {
+      stop-color: white; /* Initial color */
+  }
+  100% {
+      stop-color: rgb(0, 0, 0); /* Final color */
+  }
+}

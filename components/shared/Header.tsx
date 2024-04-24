@@ -12,7 +12,7 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            console.log(window.scrollY);
+            // console.log(window.scrollY);
             if (window.scrollY > 60) {
                 setShowSmallNav(true);
             } else {

@@ -102,31 +102,28 @@ export default function Home() {
           <div className="w-full border-b"></div>
           <p className="font-[500] text-sm">Students' Top Picks</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <Link href="/Frontend">
             <Card
               imageUrl='/assets/images/FrontendDevelopement.png'
+              Url="/Frontend"
               title='Frontend Development'
               description='Learn the art of creating beautiful and responsive user interfaces with our comprehensive frontend development courses.'
               size={268}
             />
-            </Link>
-            <Link href="Compe">
             <Card
               imageUrl='./assets/images/codeforces.svg'
+              Url="/Compe"
               title='Competitive Programming'
               description='Hone your problem-solving skills and prepare for coding competitions with our specialized competitive programming track.'
               size={72}
             />
-            </Link>
-            <Link href="DSA">
 
             <Card
               imageUrl='/assets/images/DSA.png'
+              Url="/DSA"
               title='Data Structures and Algorithms'
               description='Master the fundamentals of data structures and algorithms and enhance your problem-solving abilities with our DSA courses.'
               size={200}
             />
-            </Link>
 
 
           </div>
