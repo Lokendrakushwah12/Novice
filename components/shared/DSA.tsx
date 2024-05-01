@@ -1,6 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import arrow from '../../public/assets/icons/arrow-square-right.svg'
+import MentorCard from "@/components/ui/mentorCard";
+
+
 const Frontend = () => {
     return (
         <div className='wrapper'>
@@ -13,7 +16,7 @@ const Frontend = () => {
                 </div>
             </div>
             <div className='flex justify-between mt-14'>
-               <div className='hidden sm:block w-[20%] h-[80vh] relative'>
+                <div className='hidden sm:block w-[20%] relative'>
                     <div className='mx-5 mt-2'>
                         <ol>
                             <li>Intro</li>
@@ -23,68 +26,87 @@ const Frontend = () => {
                             <li>What's Next</li>
 
 
-                            
+
                         </ol>
                     </div>
-               </div>
-               <div className='w-[100%] md:w-[75%] relative h-[80vh] overflow-y-scroll'>
-                <div className='px-5 h-[10em]'>
-                <h1 className=' font-medium text-4xl'>Intro</h1>
-                <hr className='h-[2px] bg-black/20'></hr>
-                <p className='mt-3 '>
-                Data Structures and Algorithms (DSA) form the backbone of computer science 
-                and programming. Understanding DSA is essential for anyone aspiring to become
-                 a proficient programmer or software engineer. DSA essentially deals with organizing
-                  and manipulating data efficiently to solve complex problems. It lays
-                 the foundation for developing efficient and scalable software solutions.
-                </p>
                 </div>
-                <div className='px-5 mt-16 h-[10em]'>
+                <div className='w-[100%] md:w-[75%] relative'>
+                    <div className='px-5'>
+                        <h1 className=' font-medium text-4xl'>Intro</h1>
+                        <hr className='h-[1px] bg-black/20'></hr>
+                        <p className='mt-3 '>
+                            Data Structures and Algorithms (DSA) form the backbone of computer science
+                            and programming. Understanding DSA is essential for anyone aspiring to become
+                            a proficient programmer or software engineer. DSA essentially deals with organizing
+                            and manipulating data efficiently to solve complex problems. It lays
+                            the foundation for developing efficient and scalable software solutions.
+                        </p>
+                    </div>
+                    <div className='px-5 mt-16'>
 
-                <h1 className=' font-medium text-4xl'>Key Info</h1>
-                <hr className='h-[2px] bg-black/20'></hr>
-                <p className='mt-3 '>
-                In DSA, "data structures" refer to the way data is organized and stored, while 
-                "algorithms" are the step-by-step procedures used to manipulate this data. Some 
-                common data structures include arrays, linked lists, stacks, queues, trees, and graphs,
-                 each with its own set of operations and use cases. Meanwhile, algorithms are the recipes for solving specific
-                 problems efficiently, such as sorting, searching, and graph traversal algorithms.
-                </p>
-                </div>
-                <div className='px-5 mt-16 h-[10em]'>
+                        <h1 className=' font-medium text-4xl'>Key Info</h1>
+                        <hr className='h-[1px] bg-black/20'></hr>
+                        <p className='mt-3 '>
+                            In DSA, "data structures" refer to the way data is organized and stored, while
+                            "algorithms" are the step-by-step procedures used to manipulate this data. Some
+                            common data structures include arrays, linked lists, stacks, queues, trees, and graphs,
+                            each with its own set of operations and use cases. Meanwhile, algorithms are the recipes for solving specific
+                            problems efficiently, such as sorting, searching, and graph traversal algorithms.
+                        </p>
+                    </div>
+                    <div className='px-5 mt-16'>
 
-                <h1 className=' font-medium text-4xl'>Roadmap</h1>
-                <hr className='h-[2px] bg-black/20'></hr>
-                <p className='mt-3'>
-                To learn DSA effectively, it's crucial to follow a structured roadmap. 
-                Start by mastering the basics of programming in a language of your choice, 
-                as a solid foundation in programming concepts is essential. Then, delve into
-                 fundamental data structures like arrays and linked lists, understanding their
-                  implementation and operations. Next, progress to more complex data structures
-                   such as trees, graphs, and hash tables, exploring their applications and 
-                   algorithms. Finally, focus on algorithm design techniques like divide and conquer, dynamic programming, 
-                and greedy algorithms, honing your problem-solving skills along the way.
-                </p>
-                </div>
-                <div className='px-5 mt-16 h-[10em]'>
+                        <h1 className=' font-medium text-4xl'>Roadmap</h1>
+                        <hr className='h-[1px] bg-black/20'></hr>
+                        <p className='mt-3'>
+                            To learn DSA effectively, it's crucial to follow a structured roadmap.
+                            Start by mastering the basics of programming in a language of your choice,
+                            as a solid foundation in programming concepts is essential. Then, delve into
+                            fundamental data structures like arrays and linked lists, understanding their
+                            implementation and operations. Next, progress to more complex data structures
+                            such as trees, graphs, and hash tables, exploring their applications and
+                            algorithms. Finally, focus on algorithm design techniques like divide and conquer, dynamic programming,
+                            and greedy algorithms, honing your problem-solving skills along the way.
+                        </p>
+                    </div>
+                    <div className='px-5 mt-16'>
+                        <h1 className=' font-medium text-4xl'>Mentors</h1>
+                        <hr className='h-[1px] bg-black/20'></hr>
+                        <p className='mt-3'>
+                            <div className="flex flex-col justify-center items-start gap-4">
 
-                <h1 className=' font-medium text-4xl'>Mentors</h1>
-                <hr className='h-[2px] bg-black/20'></hr>
-                </div>
-                <div className='px-5 mt-16  h-[10em]'>
+                                <div className="flex flex-wrap gap-2 sm:gap-8">
+                                    <MentorCard
+                                        imageUrl='/assets/images/FrontendDevelopement.png'
+                                        title='Tanvy Bhola'
+                                        role='SWE @Microsoft'
+                                        link='https://www.linkedin.com/in/tanvy-bhola-'
+                                    />
+                                    <MentorCard
+                                        imageUrl='/assets/images/FrontendDevelopement.png'
+                                        title='Ashu Sharma'
+                                        role='Engineering @ Red Hat'
+                                        link='https://www.linkedin.com/in/ashu-sharma-'
+                                    />
+                                </div>
+                                <div className="">Data as of 17/04/2024.</div>
+                            </div>
+                        </p>
+                    </div>
+                    <div className='px-5 mt-16 '>
 
-                <h1 className=' font-medium text-4xl'>Whats Next</h1>
-                <hr className='h-[2px] bg-black/20'></hr>
-                <p className='mt-3'>
-                Now that you have a roadmap laid out, it's time to dive in and start learning! Start with the basics 
-                and gradually build your understanding and proficiency. Practice coding regularly, work on 
-                coding challenges and projects, and seek out resources like textbooks, online courses, 
-                and coding communities to support your learning journey. Remember, mastering DSA is a
-                 gradual process that requires patience, persistence, and dedication. Stay
-                 motivated, keep learning, and don't hesitate to seek help when needed. Happy coding!
-                </p>
+                        <h1 className=' font-medium text-4xl'>Whats Next</h1>
+                        <hr className='h-[1px] bg-black/20'></hr>
+                        <p className='mt-3'>
+                            Now that you have a roadmap laid out, it's time to dive in and start learning! Start with the basics
+                            and gradually build your understanding and proficiency. Practice coding regularly, work on
+                            coding challenges and projects, and seek out resources like textbooks, online courses,
+                            and coding communities to support your learning journey. Remember, mastering DSA is a
+                            gradual process that requires patience, persistence, and dedication. Stay
+                            motivated, keep learning, and don't hesitate to seek help when needed. Happy coding!
+                        </p>
+                    </div>
                 </div>
-               </div>
             </div>
         </div>
     )
