@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { Button } from './button'
+import { Button } from './buttonLight'
 
 interface CardProps {
     imageUrl: string;
@@ -14,7 +14,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ imageUrl, Url, title, description, size }) => {
 
     return (
-        <div className="bg-[#fff] transition-all flex flex-col gap-2">
+        <div className="bg-[#fff] transition-all flex flex-col items-start gap-2">
             {/* Image */}
             <div className="w-full h-[200px] flex items-center justify-center bg-primary-50 rounded-xl">
                 <Link href={Url}>
@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, Url, title, description, size }) 
             <h1 className="text-[#282C32] font-[500] text-base">{title}</h1>
             <p className="text-[#282C32] font-[400] text-sm leading-[1.45] tracking-[-0.02px]  ">{description}</p>
             <Link href={Url}>
-                <Button className='font-[400] gap-2 w-[80px] border hover:border-[#d9d9d9] rounded-lg p-0 hover:bg-white bg-[#fff] text-[#282C32] text-md flex items-center justify-center cursor-pointer transition-all'>
+                <Button className='font-[400] gap-2 w-[80px] rounded-lg p-0 hover:bg-white bg-[#fff] text-[#282C32] text-md flex items-center justify-center cursor-pointer transition-all'>
                     View
                     <Image
                         className=" stroke-none"

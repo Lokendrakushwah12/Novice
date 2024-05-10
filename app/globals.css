@@ -250,7 +250,7 @@ body {
   }
 
   .input-field {
-    @apply bg-grey-50 h-[44px] focus-visible:ring-offset-0 placeholder:text-grey-500 rounded-lg p-regular-16 px-4 py-0 border-[#e0e0e0] hover:border-[#d0d0d0] focus-visible:ring-transparent !important;
+    @apply bg-grey-50 h-[44px] focus-visible:ring-offset-0 placeholder:text-grey-500 rounded-lg p-regular-16 px-4 py-0 border-[#e0e0e0] hover:border-[#d0d0d0] focus-visible:ring-transparent focus:border-[#d0d0d0] !important;
   }
 
   .textarea {

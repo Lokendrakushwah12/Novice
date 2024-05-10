@@ -31,7 +31,7 @@ const ResourceForm = ({ userId, type }: ResourceFormProps) => {
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}
-                className="flex flex-col gap-5">
+                className="flex flex-col gap-5 ">
                 <div className="flex flex-col gap-5 md:flex-row">
                     <FormField
                         control={form.control}
@@ -48,7 +48,7 @@ const ResourceForm = ({ userId, type }: ResourceFormProps) => {
                         )}
                     />
                 </div>
-                <Button type="submit">Submit</Button>
+                <Button className='w-full' type="submit">Submit</Button>
             </form>
         </Form>
     )
