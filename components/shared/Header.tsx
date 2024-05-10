@@ -51,7 +51,9 @@ const Header = () => {
                     {/* if signout show => "Login" // else show => "Profile icon" */}
                     <div className="flex justify-center items-center gap-3">
                         <SignedIn>
-                            <UserButton afterSignOutUrl='/' />
+                            <div className="w-[72px] flex-center">
+                                <UserButton afterSignOutUrl='/' />
+                            </div>
                             {/* <MobileNav /> */}
                         </SignedIn>
                         <SignedOut>
