@@ -13,7 +13,7 @@ const Frontend = () => {
                 </div>
             </div>
             <div className='flex justify-between mt-14'>
-               <div className='hidden sm:block w-[20%] h-[80vh] relative'>
+               <div className='hidden sm:block w-[20%] relative'>
                     <div className='mx-5 mt-2'>
                         <ol>
                             <li>Intro</li>
@@ -27,7 +27,7 @@ const Frontend = () => {
                         </ol>
                     </div>
                </div>
-               <div className='w-[100%] md:w-[75%] relative h-[80vh] overflow-y-scroll'>
+               <div className='w-[100%] md:w-[75%] relative'>
                 <div className='px-5 h-[10em]'>
                 <h1 className=' font-medium text-4xl'>Intro</h1>
                 <hr className='h-[2px] bg-black/20'></hr>

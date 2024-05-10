@@ -250,7 +250,7 @@ body {
   }
 
   .input-field {
-    @apply bg-grey-50 h-[54px] focus-visible:ring-offset-0 placeholder:text-grey-500 rounded-full p-regular-16 px-4 py-3 border-none focus-visible:ring-transparent !important;
+    @apply bg-grey-50 h-[44px] focus-visible:ring-offset-0 placeholder:text-grey-500 rounded-lg p-regular-16 px-4 py-0 border-[#e0e0e0] hover:border-[#d0d0d0] focus-visible:ring-transparent !important;
   }
 
   .textarea {
@@ -379,17 +379,5 @@ body {
 @media (max-width: 440px) {
   .rc {
     width: 330px;
-  }
-}
-.logo path {
-  animation: animateGradient 5s linear infinite;
-}
-
-@keyframes animateGradient {
-  0% {
-      stop-color: white; /* Initial color */
-  }
-  100% {
-      stop-color: rgb(0, 0, 0); /* Final color */
   }
 }
