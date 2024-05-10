@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import arrow from '../../public/assets/icons/arrow-square-right.svg'
+import MentorCard from "@/components/ui/mentorCard";
+
 const Frontend = () => {
     return (
         <div className='wrapper'>
@@ -13,7 +15,7 @@ const Frontend = () => {
                 </div>
             </div>
             <div className='flex justify-between mt-14'>
-               <div className='hidden sm:block w-[20%] relative'>
+                <div className='hidden sm:block w-[20%] relative'>
                     <div className='mx-5 mt-2'>
                         <ol>
                             <li>Intro</li>
@@ -21,70 +23,87 @@ const Frontend = () => {
                             <li>Roadmap</li>
                             <li>Mentors</li>
                             <li>What's Next</li>
-
-
-                            
                         </ol>
                     </div>
-               </div>
-               <div className='w-[100%] md:w-[75%] relative'>
-                <div className='px-5 h-[10em]'>
-                <h1 className=' font-medium text-4xl'>Intro</h1>
-                <hr className='h-[2px] bg-black/20'></hr>
-                <p className='mt-3 '>
-                Front-end development is the art and science of crafting engaging and interactive 
-                user experiences on the web. It's the bridge between design and functionality,
-                 where developers bring static designs to life, creating dynamic and responsive
-                  websites and web applications. With the rapid evolution of web 
-                technologies, front-end development has become more exciting and challenging than ever before.
-                </p>
                 </div>
-                <div className='px-5 mt-16 h-[10em]'>
+                <div className='w-[100%] md:w-[75%] relative'>
+                    <div className='px-5'>
+                        <h1 className=' font-medium text-4xl'>Intro</h1>
+                        <hr className='h-[1px] bg-black/20'></hr>
+                        <p className='mt-3 '>
+                            Front-end development is the art and science of crafting engaging and interactive
+                            user experiences on the web. It's the bridge between design and functionality,
+                            where developers bring static designs to life, creating dynamic and responsive
+                            websites and web applications. With the rapid evolution of web
+                            technologies, front-end development has become more exciting and challenging than ever before.
+                        </p>
+                    </div>
+                    <div className='px-5 mt-16'>
 
-                <h1 className=' font-medium text-4xl'>Key Info</h1>
-                <hr className='h-[2px] bg-black/20'></hr>
-                <p className='mt-3 '>
-                Understanding the core technologies is essential for any front-end developer.
-                 HTML (HyperText Markup Language) forms the structure of web pages, while CSS 
-                 (Cascading Style Sheets) styles and enhances their appearance. JavaScript adds
-                  interactivity and functionality, allowing developers to create dynamic user experiences. 
-                  Additionally, familiarity with frameworks and libraries like React, Angular,
-                and Vue.js can significantly boost productivity and streamline development processes.
-                </p>
-                </div>
-                <div className='px-5 mt-16 h-[10em]'>
+                        <h1 className=' font-medium text-4xl'>Key Info</h1>
+                        <hr className='h-[1px] bg-black/20'></hr>
+                        <p className='mt-3 '>
+                            Understanding the core technologies is essential for any front-end developer.
+                            HTML (HyperText Markup Language) forms the structure of web pages, while CSS
+                            (Cascading Style Sheets) styles and enhances their appearance. JavaScript adds
+                            interactivity and functionality, allowing developers to create dynamic user experiences.
+                            Additionally, familiarity with frameworks and libraries like React, Angular,
+                            and Vue.js can significantly boost productivity and streamline development processes.
+                        </p>
+                    </div>
+                    <div className='px-5 mt-16'>
 
-                <h1 className=' font-medium text-4xl'>Roadmap</h1>
-                <hr className='h-[2px] bg-black/20'></hr>
-                <p className='mt-3'>
-                Embarking on a front-end development journey requires a roadmap.
-                 Start by mastering the basics of HTML, CSS, and JavaScript. Once comfortable,
-                  dive deeper into advanced topics like responsive design, accessibility, and
-                   modern CSS techniques. Explore popular front-end frameworks and libraries to 
-                   leverage their power in your projects. Continuous learning is key; stay updated with industry 
-                trends and best practices to evolve as a proficient front-end developer.
-                </p>
-                </div>
-                <div className='px-5 mt-16 h-[10em]'>
+                        <h1 className=' font-medium text-4xl'>Roadmap</h1>
+                        <hr className='h-[1px] bg-black/20'></hr>
+                        <p className='mt-3'>
+                            Embarking on a front-end development journey requires a roadmap.
+                            Start by mastering the basics of HTML, CSS, and JavaScript. Once comfortable,
+                            dive deeper into advanced topics like responsive design, accessibility, and
+                            modern CSS techniques. Explore popular front-end frameworks and libraries to
+                            leverage their power in your projects. Continuous learning is key; stay updated with industry
+                            trends and best practices to evolve as a proficient front-end developer.
+                        </p>
+                    </div>
+                    <div className='px-5 mt-16'>
 
-                <h1 className=' font-medium text-4xl'>Mentors</h1>
-                <hr className='h-[2px] bg-black/20'></hr>
-                </div>
-                <div className='px-5 mt-16  h-[10em]'>
+                        <h1 className=' font-medium text-4xl'>Mentors</h1>
+                        <hr className='h-[1px] bg-black/20'></hr>
+                        <p className='mt-3'>
+                            <div className="flex flex-col justify-center items-start gap-4">
 
-                <h1 className=' font-medium text-4xl'>Whats Next</h1>
-                <hr className='h-[2px] bg-black/20'></hr>
-                <p className='mt-3'>
-                As you progress in your front-end development journey, 
-                consider specializing in areas like UI/UX design, front-end 
-                performance optimization, or mastering specific frameworks or 
-                technologies. Experiment with new tools and techniques, contribute
-                to open-source projects, and collaborate with fellow developers to broaden 
-                your skill set. Remember, the field of front-end development is dynamic, so staying
-                 curious and adaptable is essential for continued growth and success.
-                </p>
+                                <div className="flex flex-wrap gap-2 sm:gap-8">
+                                    <MentorCard
+                                        imageUrl='/assets/images/FrontendDevelopement.png'
+                                        title='Tanvy Bhola'
+                                        role='SWE @Microsoft'
+                                        link='https://www.linkedin.com/in/tanvy-bhola-'
+                                    />
+                                    <MentorCard
+                                        imageUrl='/assets/images/FrontendDevelopement.png'
+                                        title='Ashu Sharma'
+                                        role='Engineering @ Red Hat'
+                                        link='https://www.linkedin.com/in/ashu-sharma-'
+                                    />
+                                </div>
+                                <div className="">Data as of 17/04/2024.</div>
+                            </div>
+                        </p>
+                    </div>
+                    <div className='px-5 mt-16'>
+
+                        <h1 className=' font-medium text-4xl'>Whats Next</h1>
+                        <hr className='h-[1px] bg-black/20'></hr>
+                        <p className='mt-3'>
+                            As you progress in your front-end development journey,
+                            consider specializing in areas like UI/UX design, front-end
+                            performance optimization, or mastering specific frameworks or
+                            technologies. Experiment with new tools and techniques, contribute
+                            to open-source projects, and collaborate with fellow developers to broaden
+                            your skill set. Remember, the field of front-end development is dynamic, so staying
+                            curious and adaptable is essential for continued growth and success.
+                        </p>
+                    </div>
                 </div>
-               </div>
             </div>
         </div>
     )
