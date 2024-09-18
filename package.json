@@ -22,7 +22,7 @@
     "lucide-react": "^0.364.0",
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.2",
-    "next": "14.1.4",
+    "next": "14.2.12",
     "npx": "^10.2.2",
     "query-string": "^9.0.0",
     "react": "^18",
